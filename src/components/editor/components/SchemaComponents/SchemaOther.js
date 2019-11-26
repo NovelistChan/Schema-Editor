@@ -473,7 +473,7 @@ const SchemaArray = (props, context) => {
           <Switch
             checked={data.uniqueItems}
             placeholder="uniqueItems"
-            onChange={e => changeOtherValue(e, 'uniqueItems', data, context.changeCustomValue)}
+            onChange={e => changeOtherValue(e, 'uniqueItems', data, this.context.changeCustomValue)}
           />
         </Col>
       </Row>
@@ -487,7 +487,7 @@ const SchemaArray = (props, context) => {
               <InputNumber
                 value={data.minItems}
                 placeholder="minItems"
-                onChange={e => changeOtherValue(e, 'minItems', data, context.changeCustomValue)}
+                onChange={e => changeOtherValue(e, 'minItems', data, this.context.changeCustomValue)}
               />
             </Col>
           </Row>
@@ -501,7 +501,7 @@ const SchemaArray = (props, context) => {
               <InputNumber
                 value={data.maxItems}
                 placeholder="maxItems"
-                onChange={e => changeOtherValue(e, 'maxItems', data, context.changeCustomValue)}
+                onChange={e => changeOtherValue(e, 'maxItems', data, this.context.changeCustomValue)}
               />
             </Col>
           </Row>
@@ -1090,7 +1090,7 @@ class CustomizedSchemaArray extends PureComponent {
             <Switch
               checked={data.uniqueItems}
               placeholder="uniqueItems"
-              onChange={e => changeOtherValue(e, 'uniqueItems', data, context.changeCustomValue)}
+              onChange={e => changeOtherValue(e, 'uniqueItems', data, this.context.changeCustomValue)}
             />
           </Col>
         </Row>
@@ -1104,7 +1104,7 @@ class CustomizedSchemaArray extends PureComponent {
                 <InputNumber
                   value={data.minItems}
                   placeholder="minItems"
-                  onChange={e => changeOtherValue(e, 'minItems', data, context.changeCustomValue)}
+                  onChange={e => changeOtherValue(e, 'minItems', data, this.context.changeCustomValue)}
                 />
               </Col>
             </Row>
@@ -1118,7 +1118,7 @@ class CustomizedSchemaArray extends PureComponent {
                 <InputNumber
                   value={data.maxItems}
                   placeholder="maxItems"
-                  onChange={e => changeOtherValue(e, 'maxItems', data, context.changeCustomValue)}
+                  onChange={e => changeOtherValue(e, 'maxItems', data, this.context.changeCustomValue)}
                 />
               </Col>
             </Row>
@@ -1178,7 +1178,7 @@ class CustomizedSchemaArrayTable extends PureComponent {
                 <InputNumber
                   value={data.minRows}
                   placeholder="minRows"
-                  onChange={e => changeOtherValue(e, 'minRows', data, context.changeCustomValue)}
+                  onChange={e => changeOtherValue(e, 'minRows', data, this.context.changeCustomValue)}
                 />
               </Col>
             </Row>
@@ -1192,7 +1192,7 @@ class CustomizedSchemaArrayTable extends PureComponent {
                 <InputNumber
                   value={data.maxRows}
                   placeholder="maxRows"
-                  onChange={e => changeOtherValue(e, 'maxRows', data, context.changeCustomValue)}
+                  onChange={e => changeOtherValue(e, 'maxRows', data, this.context.changeCustomValue)}
                 />
               </Col>
             </Row>

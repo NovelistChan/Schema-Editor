@@ -11,7 +11,7 @@ exports.format = [
   { name: 'uri' }
 ];
 const _ = require('underscore');
-exports.SCHEMA_TYPE = ['string', 'number', 'array', 'object', 'boolean', 'integer'];
+exports.SCHEMA_TYPE = ['string', 'number', 'array', 'object', 'boolean', 'integer', 'arrayTable'];
 exports.defaultSchema = {
   string: {
     type: 'string'
@@ -34,6 +34,12 @@ exports.defaultSchema = {
   },
   integer: {
     type: 'integer'
+  },
+  arrayTable: {
+    type: 'arrayTable',
+    columns: {
+      "a":{ title: "name", content: {type: "string"}}   
+    }
   }
 };
 

@@ -26,6 +26,8 @@ const langs = {
     'unique_items': 'Unique Items',
     'min_items':'MinItems',
     'max_items': 'MaxItems',
+    'min_rows':'MinRows',
+    'max_rows': 'MaxRows',
     'checked_all': 'Checked All',
     'valid_json': 'Not valid json',
     'enum': 'Enum',
