@@ -280,7 +280,7 @@ class jsonSchema extends React.Component {
 
     return (
       <div className="json-schema-react-editor">
-        {importButton}
+        {/* {importButton} */}
         <Modal
           maskClosable={false}
           visible={visible}
