@@ -1197,6 +1197,7 @@ class CustomizedSchemaArrayTable extends PureComponent {
               </Col>
             </Row>
           </Col>
+          
         </Row>
         <Row className="other-row" type="flex" align="middle">
           <Col span={4} className="other-label">
@@ -1221,6 +1222,23 @@ class CustomizedSchemaArrayTable extends PureComponent {
               onChange={e => this.changeOtherValue(e.target.value, 'group', data)}
             />
           </Col>
+        </Row>
+        <Row className="other-row" type="flex" align="middle">
+        
+              <Col span={4} className="other-label">
+                {LocalProvider('editable')}：
+            </Col>
+              <Col span={20}>
+                <Select
+                  value={data.editable}
+                  placeholder="TrueOrFalse"
+                  style={{width: 120}}
+                  onChange={e => changeOtherValue(e, 'editable', data, this.context.changeCustomValue)}
+                >
+                  <Option value="true">true</Option>
+              <Option value="false">false</Option>
+                  </Select>
+              </Col>
         </Row>
       </div>
     )

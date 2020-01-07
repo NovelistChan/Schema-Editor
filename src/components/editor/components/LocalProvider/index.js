@@ -28,6 +28,7 @@ const langs = {
     'max_items': 'MaxItems',
     'min_rows':'MinRows',
     'max_rows': 'MaxRows',
+    'editable': 'Editable',
     'checked_all': 'Checked All',
     'valid_json': 'Not valid json',
     'enum': 'Enum',

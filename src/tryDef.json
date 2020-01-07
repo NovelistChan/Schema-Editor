@@ -1,9 +1,62 @@
 {
     "type": "object",
+    "title": "empty object",
     "properties": {
-        "Date": {
-            "type": "date",
-            "format": "date"
-        }
-    }
-}
+      "表头": {
+        "type": "object",
+        "properties": {
+          "填报部门": {
+            "type": "string"
+          },
+          "填报人": {
+            "type": "string"
+          },
+          "责任人": {
+            "type": "string"
+          },
+          "填表日期": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "报送空表": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "填报部门",
+          "填报人",
+          "责任人",
+          "填表日期",
+          "报送空表"
+        ]
+      },
+      "数据中心(或中心机房)停止服务情况": {
+        "type": "object",
+        "properties": {
+          "30min以内": {
+            "type": "string"
+          },
+          "30-60min": {
+            "type": "string"
+          },
+          "60-120min": {
+            "type": "string"
+          },
+          "120min以上": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "30min以内",
+          "30-60min",
+          "60-120min",
+          "120min以上"
+        ]
+      }
+    },
+    "required": [
+      "表头",
+      "数据中心(或中心机房)停止服务情况"
+    ],
+    "description": "重要信息系统运行情况"
+  }

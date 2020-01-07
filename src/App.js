@@ -7,21 +7,29 @@ const extensions = {
   date
 }
 
-function App() {
-  return (
-    <div className="App">
-      <Editor data=
-      // {JSON.stringify({
-      //   type: "object",
-      //   properties: {
+class App extends React.Component {
+
+  state = {
+    schema: JSON.stringify(Def)
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <Editor data={this.state.schema}
+          // {JSON.stringify({
+          //   type: "object",
+          //   properties: {
+
+          //   }
+          // })}
           
-      //   }
-      // })}
-        {JSON.stringify(Def)}
-        extensions = {extensions}
-      />
-    </div>
-  );
+          extensions={extensions}
+          onChange={schema => console.log(schema)}
+        />
+      </div>
+    );
+  }
 }
 
 export default App;
