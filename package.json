@@ -1,5 +1,5 @@
 {
-  "name": "schema-editor-new",
+  "name": "schema-editor-local",
   "main": "dist/main.js",
   "version": "0.1.0",
   "dependencies": {
