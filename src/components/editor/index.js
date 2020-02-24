@@ -5,13 +5,13 @@ import utils from './utils'
 import moox from 'moox'
 import schema from './models/schema'
 import PropTypes from 'prop-types'
-import 'antd/dist/antd.css'
+// import 'antd/dist/antd.css'
 
 function editor(config = {}) {
-  if (config.lang) utils.lang = config.lang;
+  if (config.lang) utils.lang = config.lang
 
   if (config.defaultSchema) {
-    var type;
+    var type
     for (type in config.defaultSchema) {
       if (utils.SCHEMA_TYPE.indexOf(type) === -1) {
         utils.SCHEMA_TYPE.push(type)
@@ -19,8 +19,8 @@ function editor(config = {}) {
     }
     utils.defaultSchema = {
       ...utils.defaultSchema,
-      ...config.defaultSchema,
-    };
+      ...config.defaultSchema
+    }
   }
 
   const Model = moox({
@@ -36,10 +36,9 @@ function editor(config = {}) {
     Model.__jsonSchemaMock = config.mock
   }
 
+  const store = Model.getStore()
 
-  const store = Model.getStore();
-
-  const Component = (props) => {
+  const Component = props => {
     return (
       <Provider store={store} className="wrapper">
         <App Model={Model} {...props} />
@@ -51,24 +50,20 @@ function editor(config = {}) {
     data: PropTypes.string,
     onChange: PropTypes.func,
     showEditor: PropTypes.bool,
-    metaSchema: PropTypes.array, // 自定义meta schema
+    metaSchema: PropTypes.array // 自定义meta schema
   }
 
   Component.defaultProps = {
     metaSchema: utils.SCHEMA_TYPE,
-    showEditor: false,
+    showEditor: false
   }
 
-  return Component;
-
+  return Component
 }
 
-export default function (options) {
-
+export default function(options) {
   let config = {
-    defaultSchema: {
-
-    }
+    defaultSchema: {}
   }
 
   let templates = {}
